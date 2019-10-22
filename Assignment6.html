@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment 6</title>
+        <style type="text/css">
+            * {
+            box-sizing: border-box;
+            }
+
+            .column {
+            float: left;
+            width: 20%;
+            padding: 5px;
+            }
+
+            .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            }
+
+            @media screen and (max-width: 500px) {
+            .column {
+            width: 100%;
+            }
+            }
+        </style>
+        
+        <script src="jquery.3.4.1-comp.js"> </script>
+        
+        <script type="text/javascript">
+        $(document).ready(function(){
+        $("#image").mouseover(function(){
+        $("#pop-up").show();
+        });
+        $("#image").mouseout(function(){
+        $("#pop-up").hide();
+        });
+        });
+            
+        $(document).ready(function(){
+        $("#image1").mouseover(function(){
+        $("#pop-up1").show();
+        });
+        $("#image1").mouseout(function(){
+        $("#pop-up1").hide();
+        });
+        });
+            
+        $(document).ready(function(){
+        $("#image2").mouseover(function(){
+        $("#pop-up2").show();
+        });
+        $("#image2").mouseout(function(){
+        $("#pop-up2").hide();
+        });
+        });
+            
+        $(document).ready(function(){
+        $("#image3").mouseover(function(){
+        $("#pop-up3").show();
+        });
+        $("#image3").mouseout(function(){
+        $("#pop-up3").hide();
+        });
+        });
+            
+        $(document).ready(function(){
+        $("#image4").mouseover(function(){
+        $("#pop-up4").show();
+        });
+        $("#image4").mouseout(function(){
+        $("#pop-up4").hide();
+        });
+        });
+            
+        $(document).ready(function(){
+        $("#image").click(function(){
+        alert(artwork[0].name + artwork[0].price);
+        });
+        });
+            
+        $(document).ready(function(){
+        $("#image1").click(function(){
+        alert(artwork[1].name + artwork[1].price);
+        });
+        });
+            
+        $(document).ready(function(){
+        $("#image2").click(function(){
+        alert(artwork[2].name + artwork[2].price);
+        });
+        });
+            
+        $(document).ready(function(){
+        $("#image3").click(function(){
+        alert(artwork[3].name + artwork[3].price);
+        });
+        });
+            
+        $(document).ready(function(){
+        $("#image4").click(function(){
+        alert(artwork[4].name + artwork[4].price);
+        });
+        });
+ 
+        var artwork = [
+        {
+        name: "Second Born by Wangechi Mutu | $",
+        price: 3000000,
+        small_image: 'artwork1.jpg',
+        large_image: 'artwork1.jpg'
+        },
+        {
+        name: "As We See You: Dreams from Jand by Njideka Akunyili Crosby | $",
+        price: 1000000,
+        small_image: 'artwork2.jpg',
+        large_image: 'artwork2.jpg'    
+        },
+        {
+        name: "Savannah Landscape by Uche Okeke | $",
+        price: 5000000,
+        small_image: 'artwork3.jpg',
+        large_image: 'artwork3.jpg'    
+        },
+        {
+        name: "Lawdy Mama by Barkley L. Hendricks | $",
+        price: 7000000,
+        small_image: 'artwork4.jpg',
+        large_image: 'artwork4.jpg'   
+        },
+        {
+        name: "Praying for the Visa by Tessa Mars | $",
+        price: 900000,
+        small_image: 'artwork5.jpg',
+        large_image: 'artwork5.jpg'    
+        },
+        ];
+        </script>
+    </head>
+    
+    <body>
+        <div class="row">
+            <div class="column">
+                <span id="pop-up" style="width:100%; height:100%; position: absolute; display:none;"><img src="artwork1.jpg"/></span>
+                <div id="image"><a href="#"><img src="artwork1.jpg" alt="WangechiMutu" height="275" width="275"/></a></div>
+            </div>
+            <div class="column">
+                <span id="pop-up1" style="width:100%; height:100%; position: absolute; display:none;"><img src="artwork2.jpg"/></span>
+                <div id="image1"><a href="#"><img src="artwork2.jpg" alt="NjidekaCrosby" height="275" width="275"/></a></div>
+            </div>
+            <div class="column">
+                <span id="pop-up2" style="width:100%; height:100%; position: relative; display:none;"><img src="artwork3.jpg"/></span>
+                <div id="image2"><a href="#"><img src="artwork3.jpg" alt="UcheOkeke" height="275" width="275"/></a></div>
+            </div>
+            <div class="column">
+                <span id="pop-up3" style="width:100%; height:100%; position: absolute; display:none;"><img src="artwork4.jpg"/></span>
+                <div id="image3"><a href="#"><img src="artwork4.jpg" alt="BarkleyHendricks" height="275" width="275"/></a></div>
+            </div>
+            <div class="column">
+                <span id="pop-up4" style="width:100%; height:100%; position: absolute; display:none;"><img src="artwork5.jpg"/></span>
+                <div id="image4"><a href="#"><img src="artwork5.jpg" alt="TessaMars" height="275" width="275"/></a></div>
+            </div>
+        </div>        
+    </body>
+</html>
